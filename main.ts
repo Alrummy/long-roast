@@ -1,10 +1,9 @@
-
 const fs = require('fs');
 const path = require('path');
+
+// The joke: lawmakers treat AI/crypto moderation as a deadline to punt on — all talk, meeting adjourned.
+const TEXT = 'Lawmakers promise to regulate AI, crypto and the internet by Friday, then adjourn early because the agenda is still a Word file nobody can convert to PDF.';
+
 const outDir = process.env.MAKEFUN_OUTPUT_DIR || '/output';
-// The joke: lawmakers frame the bridge as a bureaucratic shell game, so the entry narrates the grift as the punchline.
-const part1 = 'Lawmakers are the only people who can spend forty years promising to fix the bridge, hold a ribbon-cutting for the study about the bridge, and then campaign on how the bridge was never their department. ';
-const part2 = 'They govern by press release, legislate by hashtag, and retire to the very boards they were supposed to regulate.';
-const text = part1 + part2;
 fs.mkdirSync(outDir, { recursive: true });
-fs.writeFileSync(path.join(outDir, 'entry.txt'), text + '\n');
+fs.writeFileSync(path.join(outDir, 'entry.txt'), TEXT + '\n');
